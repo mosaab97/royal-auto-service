@@ -97,8 +97,22 @@ export default function Contact() {
               </div>
 
               {/* Map Placeholder */}
-              <div className="mt-8 bg-gray-200 rounded-lg h-64 flex items-center justify-center">
+              {/* <div className="mt-8 bg-gray-200 rounded-lg h-64 flex items-center justify-center">
                 <p className="text-gray-500">Map placeholder - Add Google Maps integration here</p>
+              </div> */}
+              {/* Map - Using Google Maps Static API */}
+              <div className="mt-8 rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  title="Royal Auto Service Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2919.2255218987702!2d-87.9967366241184!3d42.97352279612491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8805103830146de5%3A0xf9edcb867e6fc5a1!2s6441%20W%20Howard%20Ave%2C%20Milwaukee%2C%20WI%2053220!5e0!3m2!1sen!2sus!4v1763688195602!5m2!1sen!2sus"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full"
+                ></iframe>
               </div>
             </div>
 

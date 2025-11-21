@@ -1,7 +1,14 @@
-import { Wrench, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { Wrench, ChevronRight, Phone } from 'lucide-react';
 import Button from '../common/Button';
+import Tooltip from '../common/Tooltip';
+import { CONTACT_INFO } from '../../utils/constants';
 
 export default function Hero() {
+  const handleCallNow = () => {
+    window.location.href = `tel:${CONTACT_INFO.phone}`;
+  };
+
   return (
     <section id="home" className="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,13 +18,18 @@ export default function Hero() {
               Your Trusted Auto Repair Partner
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Professional automotive service with over 20 years of experience. Quality repairs, honest pricing, and exceptional customer service.
+              Professional automotive service with over 10 years of experience. Quality repairs, honest pricing, and exceptional customer service.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary">
-                Schedule Service <ChevronRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button variant="secondary">
+              <Tooltip text="Online booking coming soon! Call us to schedule." position="bottom">
+                <span>
+                  <Button variant="primary" disabled className="cursor-not-allowed opacity-60">
+                    Schedule Service <ChevronRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </span>
+              </Tooltip>
+              <Button variant="secondary" onClick={handleCallNow}>
+                <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </Button>
             </div>

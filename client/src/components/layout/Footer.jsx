@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Royal Auto Service</h3>
-            <p className="text-gray-400">Your trusted partner for all automotive needs since 2000.</p>
+            <p className="text-gray-400">Your trusted partner for all automotive needs since 2015.</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Royal Auto Service. All rights reserved.</p>
+          <p>&copy; 2025 Royal Auto Service. All rights reserved.</p>
         </div>
       </div>
     </footer>

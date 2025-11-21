@@ -1,8 +1,8 @@
-import React from 'react';
-import { Wrench, Settings, Droplet, Battery, Wind, Gauge, Shield, Hammer } from 'lucide-react';
+import { Wrench, Settings, Droplet, Battery, Wind, Gauge, Shield, Hammer, Phone } from 'lucide-react';
 import PageHeader from '../components/common/PageHeader';
 import ServiceCard from '../components/common/ServiceCard';
 import Button from '../components/common/Button';
+import Tooltip from '../components/common/Tooltip';
 
 export default function Services() {
   const services = [
@@ -56,6 +56,10 @@ export default function Services() {
     }
   ];
 
+  const handleContact = () => {
+    window.location.href = '/contact';
+  };
+
   return (
     <div className="pt-24 pb-16">
       <PageHeader 
@@ -77,9 +81,19 @@ export default function Services() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Need a Service?</h2>
           <p className="text-xl text-blue-100 mb-8">Contact us today to schedule your appointment.</p>
-          <Button variant="outline" className="text-lg py-4">
-            Schedule Now
-          </Button>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Tooltip text="Online booking coming soon! Contact us to schedule." position="top">
+              <span>
+                <Button variant="outline" className="text-lg py-4 cursor-not-allowed opacity-60" disabled>
+                  Schedule Now
+                </Button>
+              </span>
+            </Tooltip>
+            <Button variant="outline" className="text-lg py-4" onClick={handleContact}>
+              <Phone className="w-5 h-5 mr-2" />
+              Contact Us
+            </Button>
+          </div>
         </div>
       </section>
     </div>
